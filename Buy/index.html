@@ -22,6 +22,13 @@
  
     <!-- Bootstrap -->
     <link href="../styles/css/bootstrap.min.css" rel="stylesheet">
+	<audio autoplay loop>
+  <source src="../assets/Audio/tick tock.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="myAudio">
+  <source src="../assets/Audio/Swoosh.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
  
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -152,8 +159,8 @@ ul.nav a:hover { color: lime!important; }
 				<!--Horizontal Tab-->
 				<div id="parentHorizontalTab_agile">
 					<ul class="resp-tabs-list hor_1">
-						<li>pickup</li>
-						<li>delivery</li>
+						<li onclick="playAudio()">pickup</li>
+						<li onclick="playAudio()">delivery</li>
 					</ul>
 					<div class="resp-tabs-container hor_1">
 					   <div class="agile_its_registration">
@@ -191,6 +198,17 @@ ul.nav a:hover { color: lime!important; }
 	<p>© 2018 Joels signage company. All rights reserved</p>
 </div>
 		<!--js-->
+	<script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+    x.play(); 
+} 
+
+function pauseAudio() { 
+    x.pause(); 
+} 
+</script>
 				<script type="text/javascript" src="../styles/js/jquery-2.1.4.min.js"></script>
 		<!--//js-->
 		<!--tabs-->
